@@ -9,3 +9,7 @@ A nhooyr.io/websocket package backend
 - go get -u nhooyr.io/websocket
 - go get -u nhooyr.io/websocket/wsjson
 - go mod tidy
+
+## 3、安裝 gorilla/websocket  (使用目前最受歡迎的套件進行server端重構)
+- go get -u github.com/gorilla/websocket
+- go mod tidy
