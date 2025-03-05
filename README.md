@@ -12,6 +12,7 @@ A nhooyr.io/websocket package backend
 -   mkdir -p cmd/chatroom
 -   touch cmd/chatroom/main.go
 -   cmd/chatroom/main.go 是應用程式的進入點
+-   建立 config 的設定及 global 的全域變數
 -   這裡將負責啟動 HTTP 伺服器，載入 WebSocket 服務，並初始化其他必要的服務
 3. 建立 server 資料夾與處理邏輯
 -   mkdir server
