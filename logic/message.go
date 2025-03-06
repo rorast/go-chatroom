@@ -33,7 +33,7 @@ type Message struct {
 	Ats []string `json:"ats"`
 
 	// 用戶列表不通過 WebSocket 下發
-	// Users []*User `json:"users"`
+	//Users []*User `json:"users"`
 }
 
 // NewMessage 創建消息

@@ -71,3 +71,11 @@ A nhooyr.io/websocket package backend
 - go get -u golang.org/x/sys/...
 - go get -u github.com/fsnotify/fsnotify
 - go mod tidy
+
+## 6、進行測試 (window要安裝 GCC（C 編譯器），mac 下不用 )
+-  安裝有二種 : 方法 1：安裝 MinGW-w64（推薦），方法 2：使用 TDM-GCC（替代方案）
+-  本次使用方法 2 : https://jmeubank.github.io/tdm-gcc/download/
+-  安裝完在PowerShell下執行 : $env:Path += ";C:\TDM-GCC-64\bin"
+-  主程式運行 :  go build -o go-chat.exe .\cmd\chatroom\main.go
+-  在PowerShell 下 : $env:CGO_ENABLED="1"
+-  壓力測試 : go run -race .\cmd\benchmark\main.go -u 100 -m 20s -l 0 
