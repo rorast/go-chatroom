@@ -230,7 +230,7 @@
         //2: 請求已接收
         //3: 請求處理中
         //4: 請求已完成，且響應已就緒
-        xhr.open('GET', '/user_list', true)
+        xhr.open('GET', '/users', true)
         xhr.onreadystatechange = function () {
           //readyStatus == 4說明請求已經完成
           if(xhr.readyState == 4 && xhr.status ==200) {

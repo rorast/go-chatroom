@@ -11,6 +11,6 @@ func RegisterHandle() {
 
 	// 聊天室服務器處理路由
 	http.HandleFunc("/", indexHandleFunc)
-	http.HandleFunc("/user", userHandleFunc)
+	http.HandleFunc("/users", userHandleFunc)
 	http.HandleFunc("/ws", websocketHandleFunc)
 }
