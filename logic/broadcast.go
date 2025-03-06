@@ -56,11 +56,13 @@ var Broadcaster = &broadcaster{
 
 // Start() - 廣播器的核心 - 需要在一个新 goroutine 中運行，因为它不會返回
 func (b *broadcaster) Start() {
+	fmt.Println("Start() ...  ")
 	// 事件驅動的 Goroutine，負責處理不同的聊天室事件。
 	for { // 這裡是一個無限循環，不斷地從不同的 channel 中讀取數據。
 		select {
 		// 新使用者進入聊天室，存入 users，並可能發送離線訊息。
 		case user := <-b.enteringChannel:
+			fmt.Println("user := <-b.enteringChannel: ...  ")
 			// 新用户进入
 			b.users[user.NickName] = user
 
@@ -79,6 +81,7 @@ func (b *broadcaster) Start() {
 					continue
 				}
 				user.MessageChannel <- msg
+				fmt.Println("msg :: ", msg)
 			}
 			OfflineProcessor.Save(msg)
 		// 檢查用戶是否已存在，結果透過 checkUserCanInChannel 回傳。

@@ -1,1 +1,14 @@
-package config
+sensitive:
+  - BB
+  - SEX
+  - 作壞
+  - 性
+  - 傻逼
+  - 混蛋
+  - 笨蛋
+
+offline-num: 3
+
+token-secret: 4ddcK5keNi3L
+
+message-queue: 1024
